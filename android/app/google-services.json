@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "772375204911-8ppp0dfeorqks7daihsgvq0dp4849hg8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahfy.app",
+            "certificate_hash": "9500a1831cfbf60d5ceb8771b75c8228ebcb583c"
+          }
+        },
+        {
           "client_id": "772375204911-fstlkpnqu7sqtsuh476gkr4m5g00go6u.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

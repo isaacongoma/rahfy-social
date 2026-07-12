@@ -35,7 +35,8 @@ class LiveStreamSearchScreen extends StatelessWidget {
             CustomSearchTextField(
               onChanged: controller.onSearchChange,
               backgroundColor: whitePure(context).withValues(alpha: .15),
-              borderSide: BorderSide(color: whitePure(context).withValues(alpha: .18)),
+              borderSide:
+                  BorderSide(color: whitePure(context).withValues(alpha: .18)),
             ),
             LiveStreamListView(controller: controller),
           ],
@@ -67,17 +68,22 @@ class LiveStreamSearchTopView extends StatelessWidget {
                 alignment: Alignment.center,
                 decoration: ShapeDecoration(
                   shape: SmoothRectangleBorder(
-                      borderRadius: SmoothBorderRadius(cornerRadius: 30, cornerSmoothing: 0),
-                      side: BorderSide(color: whitePure(context).withValues(alpha: .3), width: 1),
+                      borderRadius: SmoothBorderRadius(
+                          cornerRadius: 30, cornerSmoothing: 0),
+                      side: BorderSide(
+                          color: whitePure(context).withValues(alpha: .3),
+                          width: 1),
                       borderAlign: BorderAlign.inside),
                   color: ColorRes.textStoryBgGradient2,
                 ),
                 child: Row(
                   children: [
-                    Image.asset(AssetRes.icLive, color: whitePure(context), height: 22, width: 22),
+                    Image.asset(AssetRes.icLive,
+                        color: whitePure(context), height: 22, width: 22),
                     const SizedBox(width: 5),
                     Text(LKey.livestreams.tr.toUpperCase(),
-                        style: TextStyleCustom.unboundedRegular400(fontSize: 12, color: whitePure(context)))
+                        style: TextStyleCustom.unboundedRegular400(
+                            fontSize: 12, color: whitePure(context)))
                   ],
                 ),
               ),
@@ -91,7 +97,9 @@ class LiveStreamSearchTopView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8),
               decoration: ShapeDecoration(
                   color: Colors.white,
-                  shape: SmoothRectangleBorder(borderRadius: SmoothBorderRadius(cornerRadius: 30, cornerSmoothing: 1))),
+                  shape: SmoothRectangleBorder(
+                      borderRadius: SmoothBorderRadius(
+                          cornerRadius: 30, cornerSmoothing: 1))),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -103,7 +111,8 @@ class LiveStreamSearchTopView extends StatelessWidget {
                   ),
                   Text(
                     LKey.goLive.tr,
-                    style: TextStyleCustom.unboundedRegular400(color: blackPure(context), fontSize: 12),
+                    style: TextStyleCustom.unboundedRegular400(
+                        color: blackPure(context), fontSize: 12),
                   ),
                 ],
               ),
@@ -141,7 +150,10 @@ class LiveStreamListView extends StatelessWidget {
       );
     }
 
-    Widget _buildImageContain({List<AppUser> allUsers = const [], int userCount = 0, bool isBattleOn = false}) {
+    Widget _buildImageContain(
+        {List<AppUser> allUsers = const [],
+        int userCount = 0,
+        bool isBattleOn = false}) {
       if (allUsers.isEmpty) return const SizedBox();
 
       return Container(
@@ -165,7 +177,8 @@ class LiveStreamListView extends StatelessWidget {
                               image: allUsers.first.profile?.addBaseURL(),
                               fullName: allUsers.first.fullname,
                               strokeWidth: 2,
-                              strokeColor: whitePure(context).withValues(alpha: .55)),
+                              strokeColor:
+                                  whitePure(context).withValues(alpha: .55)),
                         ),
                       ),
                       Positioned(
@@ -179,14 +192,16 @@ class LiveStreamListView extends StatelessWidget {
                             image: allUsers[1].profile?.addBaseURL(),
                             fullName: allUsers[1].fullname,
                             strokeWidth: 2,
-                            strokeColor: whitePure(context).withValues(alpha: .55),
+                            strokeColor:
+                                whitePure(context).withValues(alpha: .55),
                           ),
                         ),
                       ),
                       if (isBattleOn)
                         Align(
                           alignment: Alignment.center,
-                          child: Image.asset(AssetRes.icBattleVs, height: 60, width: 60),
+                          child: Image.asset(AssetRes.icBattleVs,
+                              height: 60, width: 60),
                         )
                     ],
                   );
@@ -207,7 +222,8 @@ class LiveStreamListView extends StatelessWidget {
                           image: allUsers.first.profile?.addBaseURL(),
                           fullName: allUsers.first.fullname,
                           strokeWidth: 2,
-                          strokeColor: whitePure(context).withValues(alpha: .55),
+                          strokeColor:
+                              whitePure(context).withValues(alpha: .55),
                         ),
                       ),
                       Positioned(
@@ -221,7 +237,8 @@ class LiveStreamListView extends StatelessWidget {
                             image: allUsers[1].profile?.addBaseURL(),
                             fullName: allUsers[1].fullname,
                             strokeWidth: 2,
-                            strokeColor: whitePure(context).withValues(alpha: .55),
+                            strokeColor:
+                                whitePure(context).withValues(alpha: .55),
                           ),
                         ),
                       ),
@@ -236,7 +253,8 @@ class LiveStreamListView extends StatelessWidget {
                             image: allUsers[2].profile?.addBaseURL(),
                             fullName: allUsers[2].fullname,
                             strokeWidth: 2,
-                            strokeColor: whitePure(context).withValues(alpha: .55),
+                            strokeColor:
+                                whitePure(context).withValues(alpha: .55),
                           ),
                         ),
                       ),
@@ -259,7 +277,8 @@ class LiveStreamListView extends StatelessWidget {
                           image: allUsers.first.profile?.addBaseURL(),
                           fullName: allUsers.first.fullname,
                           strokeWidth: 2,
-                          strokeColor: whitePure(context).withValues(alpha: .55),
+                          strokeColor:
+                              whitePure(context).withValues(alpha: .55),
                         ),
                       ),
                       Positioned(
@@ -273,7 +292,8 @@ class LiveStreamListView extends StatelessWidget {
                             image: allUsers[1].profile?.addBaseURL(),
                             fullName: allUsers[1].fullname,
                             strokeWidth: 2,
-                            strokeColor: whitePure(context).withValues(alpha: .55),
+                            strokeColor:
+                                whitePure(context).withValues(alpha: .55),
                           ),
                         ),
                       ),
@@ -289,7 +309,8 @@ class LiveStreamListView extends StatelessWidget {
                             image: allUsers[2].profile?.addBaseURL(),
                             fullName: allUsers[2].fullname,
                             strokeWidth: 2,
-                            strokeColor: whitePure(context).withValues(alpha: .55),
+                            strokeColor:
+                                whitePure(context).withValues(alpha: .55),
                           ),
                         ),
                       ),
@@ -304,7 +325,8 @@ class LiveStreamListView extends StatelessWidget {
                             image: allUsers[3].profile?.addBaseURL(),
                             fullName: allUsers[3].fullname,
                             strokeWidth: 2,
-                            strokeColor: whitePure(context).withValues(alpha: .55),
+                            strokeColor:
+                                whitePure(context).withValues(alpha: .55),
                           ),
                         ),
                       ),
@@ -334,13 +356,15 @@ class LiveStreamListView extends StatelessWidget {
               decoration: BoxDecoration(
                   color: whitePure(context).withValues(alpha: .15),
                   borderRadius: SmoothBorderRadius(cornerRadius: 30),
-                  border: Border.all(color: whitePure(context).withValues(alpha: .15))),
+                  border: Border.all(
+                      color: whitePure(context).withValues(alpha: .15))),
               child: FullNameWithBlueTick(
                   username: hostUser.username,
                   isVerify: hostUser.isVerify,
                   iconSize: 16,
                   icon: AssetRes.icVerifiedWhite,
-                  style: TextStyleCustom.outFitMedium500(color: whitePure(context), fontSize: 15)),
+                  style: TextStyleCustom.outFitMedium500(
+                      color: whitePure(context), fontSize: 15)),
             ),
           Text(
             '${watchingCount.numberFormat} ${LKey.viewers.tr}',
@@ -353,16 +377,19 @@ class LiveStreamListView extends StatelessWidget {
     Widget _buildDescription(Livestream stream) {
       return Flexible(
           child: Text(stream.description ?? '',
-              style: TextStyleCustom.outFitSemiBold600(color: whitePure(context), fontSize: 19),
+              style: TextStyleCustom.outFitSemiBold600(
+                  color: whitePure(context), fontSize: 19),
               maxLines: 3,
               overflow: TextOverflow.ellipsis));
     }
 
     Widget _buildGridItem(Livestream stream) {
       return Obx(() {
-        AppUser? hostUser = stream.getHostUser(controller.firebaseFirestoreController.users);
+        AppUser? hostUser =
+            stream.getHostUser(controller.firebaseFirestoreController.users);
 
-        List<AppUser> allUsers = stream.getAllUsers(controller.firebaseFirestoreController.users);
+        List<AppUser> allUsers =
+            stream.getAllUsers(controller.firebaseFirestoreController.users);
         bool isBattleOn = stream.type == LivestreamType.battle;
         int userCount = allUsers.length;
         int count = stream.watchingCount ?? 0;
@@ -377,7 +404,10 @@ class LiveStreamListView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  _buildImageContain(allUsers: allUsers, isBattleOn: isBattleOn, userCount: userCount),
+                  _buildImageContain(
+                      allUsers: allUsers,
+                      isBattleOn: isBattleOn,
+                      userCount: userCount),
                   _buildUserInfo(hostUser, watchingCount),
                   _buildDescription(stream),
                 ],
@@ -391,20 +421,32 @@ class LiveStreamListView extends StatelessWidget {
     return Expanded(
       child: Obx(
         () {
-          return controller.isLoading.value && controller.livestreamFilterList.isEmpty
+          return controller.isLoading.value &&
+                  controller.livestreamFilterList.isEmpty
               ? const LoaderWidget()
               : NoDataView(
-                  showShow: !controller.isLoading.value && controller.livestreamFilterList.isEmpty,
+                  showShow: !controller.isLoading.value &&
+                      controller.livestreamFilterList.isEmpty,
                   title: LKey.noLivestreamsTitle,
                   description: LKey.noLivestreamsDescription.tr,
+                  titleColor: whitePure(context),
+                  descriptionColor: whitePure(context).withValues(alpha: .8),
                   child: GridView.builder(
                     itemCount: controller.livestreamFilterList.length,
-                    padding: EdgeInsets.only(bottom: AppBar().preferredSize.height),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2, crossAxisSpacing: 1, mainAxisSpacing: 1, mainAxisExtent: 310),
+                    padding:
+                        EdgeInsets.only(bottom: AppBar().preferredSize.height),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 1,
+                            mainAxisSpacing: 1,
+                            mainAxisExtent: 310),
                     itemBuilder: (context, index) {
-                      Livestream stream = controller.livestreamFilterList[index];
-                      return InkWell(onTap: () => controller.onLiveUserTap(stream), child: _buildGridItem(stream));
+                      Livestream stream =
+                          controller.livestreamFilterList[index];
+                      return InkWell(
+                          onTap: () => controller.onLiveUserTap(stream),
+                          child: _buildGridItem(stream));
                     },
                   ),
                 );

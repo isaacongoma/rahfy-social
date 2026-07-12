@@ -12,6 +12,8 @@ class NoDataView extends StatelessWidget {
       this.child,
       this.showShow = true,
       this.bgColor,
+      this.titleColor,
+      this.descriptionColor,
       this.safeAreaTop = false});
 
   final String? title;
@@ -19,6 +21,8 @@ class NoDataView extends StatelessWidget {
   final Widget? child;
   final bool showShow;
   final Color? bgColor;
+  final Color? titleColor;
+  final Color? descriptionColor;
   final bool safeAreaTop;
 
   @override
@@ -38,13 +42,14 @@ class NoDataView extends StatelessWidget {
                       child: Text(
                         (title ?? LKey.noData).tr,
                         style: TextStyleCustom.unboundedSemiBold600(
-                            color: textLightGrey(context), fontSize: 17),
+                            color: titleColor ?? textLightGrey(context),
+                            fontSize: 17),
                         textAlign: TextAlign.center,
                       ),
                     ),
                     Text((description ?? LKey.noContentMessage).tr,
                         style: TextStyleCustom.outFitLight300(
-                          color: textLightGrey(context),
+                          color: descriptionColor ?? textLightGrey(context),
                         ),
                         textAlign: TextAlign.center),
                   ],
