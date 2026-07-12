@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "772375204911",
+    "project_id": "rahfy-863a9",
+    "storage_bucket": "rahfy-863a9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772375204911:android:cb9b8247958f162d7ce2da",
+        "android_client_info": {
+          "package_name": "com.rahfy.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772375204911-fstlkpnqu7sqtsuh476gkr4m5g00go6u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahfy.app",
+            "certificate_hash": "4bbc6180a1ca2919e3c08a160655f84f96b50973"
+          }
+        },
+        {
+          "client_id": "772375204911-epn0k1tf04222pgmvbt3aqfe2mjh8dfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCICpcV802qafVHA1BK0OQlTuPujkRh0LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772375204911-epn0k1tf04222pgmvbt3aqfe2mjh8dfi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "772375204911-4pfrs8v79h8642r9pl2vme1ilugeoedr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rahfy.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
